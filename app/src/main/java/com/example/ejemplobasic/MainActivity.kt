@@ -14,6 +14,9 @@ import org.jetbrains.anko.toast
 
 import android.content.Intent
 import android.widget.EditText
+import org.jetbrains.anko.browse
+import org.jetbrains.anko.intentFor
+import org.jetbrains.anko.singleTop
 
 
 const val EXTRA_MESSAGE = "com.example.myfirstapp.MESSAGE"
@@ -42,18 +45,22 @@ class MainActivity : AppCompatActivity() {
 
         }
 
+
     }
 
     /** Called when the user taps the Send button */
-    fun sendMessage(view: View) {
-        val editText = findViewById<EditText>(R.id.Mensaje)
-        val message = editText.text.toString()
-        val intent = Intent(this, DisplayMessageActivity::class.java).apply {
-            putExtra(EXTRA_MESSAGE, message)
-        }
-        startActivity(intent)
+
+
+    fun colorRojo(view: View){
+        startActivity(intentFor<DisplayMessageActivity>("color" to "rojo"))
+    }
+    fun colorAmarillo(view: View){
+        startActivity(intentFor<DisplayMessageActivity>("color" to "amarillo"))
     }
 
+    fun internete(view: View){
+        browse("https://www.20minutos.es/")
+    }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         // Inflate the menu; this adds items to the action bar if it is present.
