@@ -8,4 +8,7 @@
     <string name="Rojo">Rojo</string>
     <string name="Amarillo">Amarillo</string>
     <string name="Internete">20min</string>
+    <string name="Sumatorio">Suma</string>
+    <string name="Voler">volver</string>
+    <string name="camara">CAMARA</string>
 </resources>
